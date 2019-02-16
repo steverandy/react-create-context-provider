@@ -1,0 +1,7 @@
+*.log*
+.DS_Store
+.tmp
+tmp
+tags
+lib
+node_modules

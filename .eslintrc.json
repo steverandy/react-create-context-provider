@@ -1,0 +1,38 @@
+{
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaVersion": 9,
+    "ecmaFeatures": {
+      "jsx": true,
+      "globalReturn": true
+    }
+  },
+  "env": {
+    "es6": true,
+    "node": true,
+    "browser": true,
+    "jest/globals": true
+  },
+  "plugins": [
+    "jest",
+    "react",
+    "react-hooks"
+  ],
+  "extends": [
+    "eslint:recommended",
+    "plugin:jest/recommended",
+    "plugin:react/recommended"
+  ],
+  "rules": {
+    "semi": "warn",
+    "no-console": "warn",
+    "no-unused-vars": ["error", {"vars": "all", "args": "none"}],
+    "react/prop-types": "off",
+    "react-hooks/rules-of-hooks": "error"
+  },
+  "settings": {
+    "react": {
+      "version": "16.8"
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "name": "react-context-provider",
+  "version": "0.0.0",
+  "description": "",
+  "main": "lib/index.js",
+  "author": "Steve Randy Tantra",
+  "license": "MIT",
+  "scripts": {
+    "test": "npm run eslint && jest",
+    "eslint": "eslint --ext=js src",
+    "build": "babel src --out-dir lib",
+    "prepublish": "npm run test && npm run build"
+  },
+  "peerDependencies": {
+    "react": "^16.8.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.3.3",
+    "@babel/plugin-proposal-object-rest-spread": "^7.3.2",
+    "@babel/preset-env": "^7.3.1",
+    "@babel/preset-react": "^7.0.0",
+    "eslint": "^5.14.0",
+    "eslint-plugin-jest": "^22.3.0",
+    "eslint-plugin-react": "^7.12.4",
+    "eslint-plugin-react-hooks": "^1.0.2",
+    "jest": "^24.1.0"
+  }
+}
