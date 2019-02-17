@@ -1,6 +1,6 @@
 {
   "name": "react-create-context-provider",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Create a React Context Provider component",
   "main": "lib/index.js",
   "author": "Steve Randy Tantra",
