@@ -1,19 +1,19 @@
 import "@babel/polyfill";
 import React from "react";
 import {render, fireEvent, cleanup, waitForElement} from "react-testing-library";
-import {createContext} from "./index";
+import createContextProvider from "./index";
 
 afterEach(cleanup);
 
 describe("index", () => {
   test("createContext", () => {
-    let [Context, ContextProvider] = createContext({theme: "light"});
+    let [Context, ContextProvider] = createContextProvider({theme: "light"});
     expect(Context).toBeDefined();
     expect(ContextProvider).toBeDefined();
   });
 
   test("useContext", async () => {
-    let [AppContext, AppContextProvider] = createContext({theme: "light"});
+    let [AppContext, AppContextProvider] = createContextProvider({theme: "light"});
     expect(AppContext).toBeDefined();
     expect(AppContextProvider).toBeDefined();
 

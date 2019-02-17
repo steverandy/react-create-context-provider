@@ -1,7 +1,7 @@
 import React from "react";
 import {pascalCase} from "./utils";
 
-function createContext(defaultValue) {
+export default function createContextProvider(defaultValue) {
   let Context = React.createContext(defaultValue);
 
   function ContextProvider(props) {
@@ -22,5 +22,3 @@ function createContext(defaultValue) {
 
   return [Context, ContextProvider];
 }
-
-export {createContext};
