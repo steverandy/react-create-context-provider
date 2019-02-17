@@ -1,4 +1,4 @@
-let {pascalCase} = require("./utils");
+import {pascalCase} from "./utils";
 
 describe("utils", () => {
   test("pascalCase", () => {
