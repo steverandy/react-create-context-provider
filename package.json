@@ -1,10 +1,23 @@
 {
   "name": "react-create-context-provider",
   "version": "0.0.0",
-  "description": "",
+  "description": "Create a React Context Provider component",
   "main": "lib/index.js",
   "author": "Steve Randy Tantra",
   "license": "MIT",
+  "repository": "steverandy/react-create-context-provider",
+  "homepage": "https://github.com/steverandy/react-create-context-provider",
+  "bugs": {
+    "url": "https://github.com/steverandy/react-create-context-provider/issues"
+  },
+  "keywords": [
+    "react",
+    "context",
+    "provider"
+  ],
+  "files": [
+    "lib"
+  ],
   "scripts": {
     "test": "npm run eslint && jest",
     "eslint": "eslint --ext=js src",
