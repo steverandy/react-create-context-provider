@@ -13,7 +13,9 @@ describe("index", () => {
   });
 
   test("useContext", async () => {
-    let [AppContext, AppContextProvider] = createContextProvider({theme: "light"});
+    let [AppContext, AppContextProvider] = createContextProvider({
+      user: null, theme: "light"
+    });
     expect(AppContext).toBeDefined();
     expect(AppContextProvider).toBeDefined();
 
@@ -23,9 +25,11 @@ describe("index", () => {
     }
 
     function App() {
-      let {theme} = React.useContext(AppContext);
+      let {theme, user, setUser} = React.useContext(AppContext);
+      React.useEffect(() => setUser("admin"), []);
       return <div className="app">
-        <h1>Theme: {theme}</h1>
+        <h1>User: {user}</h1>
+        <h2>Theme: {theme}</h2>
         <DarkThemeButton/>
       </div>;
     }
@@ -33,8 +37,10 @@ describe("index", () => {
     let app = <AppContextProvider><App/></AppContextProvider>;
     let {getByText} = render(app);
 
+    expect(getByText(/User:/).textContent).toContain("admin");
     expect(getByText(/Theme:/).textContent).toContain("light");
     fireEvent.click(getByText("Use Dark Theme"));
+    expect(getByText(/User:/).textContent).toContain("admin");
     let theme = await waitForElement(() => getByText(/Theme:/));
     expect(theme.textContent).toContain("dark");
   });

@@ -10,7 +10,9 @@ export default function createContextProvider(defaultValue) {
       if (typeof initialContextValue[key] !== "function") {
         let setKey = `set${pascalCase(key)}`;
         initialContextValue[setKey] = (value) => {
-          setContextValue({...contextValue, [key]: value});
+          setContextValue((prevContextValue) => {
+            return {...prevContextValue, [key]: value};
+          });
         };
       }
     });
