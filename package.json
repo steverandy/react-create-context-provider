@@ -21,7 +21,7 @@
   "scripts": {
     "test": "npm run eslint && jest",
     "eslint": "eslint --ext=js src",
-    "build": "rm -rf lib && babel src --out-dir lib --ignore '**/*.test.js'",
+    "build": "rm -rf lib && babel src --out-dir lib",
     "prepublishOnly": "npm run test && npm run build"
   },
   "peerDependencies": {

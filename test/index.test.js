@@ -1,7 +1,7 @@
 import "@babel/polyfill";
 import React from "react";
 import {render, fireEvent, cleanup, waitForElement} from "react-testing-library";
-import createContextProvider from "./index";
+import createContextProvider from "./../src/index";
 
 afterEach(cleanup);
 

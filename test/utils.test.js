@@ -1,4 +1,4 @@
-import {pascalCase} from "./utils";
+import {pascalCase} from "./../src/utils";
 
 describe("utils", () => {
   test("pascalCase", () => {
